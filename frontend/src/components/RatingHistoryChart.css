@@ -1,0 +1,94 @@
+.contest-rating-chart-container {
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: 16px;
+  margin-top: 15px;
+}
+
+.empty-chart-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  padding: 20px;
+  background: rgba(15, 23, 42, 0.35);
+  border: 1px dashed rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.contest-trend-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.trend-contest-title {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+}
+
+.trend-contest-rating {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 2px;
+}
+
+.trend-contest-rating strong {
+  color: #f59e0b;
+}
+
+.chart-svg-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.rating-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+}
+
+.grid-line {
+  stroke: rgba(255, 255, 255, 0.04);
+  stroke-width: 1;
+  stroke-dasharray: 2 2;
+}
+
+.axis-line {
+  stroke: rgba(255, 255, 255, 0.1);
+  stroke-width: 1.5;
+}
+
+.grid-label-text {
+  fill: var(--text-secondary);
+  font-size: 0.55rem;
+  font-family: inherit;
+}
+
+.chart-point-marker {
+  transition: r 0.15s ease, fill 0.15s ease;
+}
+
+.contest-history-timeline-caption {
+  display: flex;
+  justify-content: flex-end;
+  font-size: 0.65rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}

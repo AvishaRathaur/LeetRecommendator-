@@ -1,0 +1,148 @@
+.navbar {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  transition: var(--transition-smooth);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 24px;
+}
+
+.navbar-logo {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-title);
+  cursor: pointer;
+}
+
+.logo-icon {
+  color: var(--accent);
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  gap: 16px;
+}
+
+.nav-item {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+  font-weight: 600;
+  transition: var(--transition-smooth);
+  border-bottom: 3px solid transparent;
+}
+
+.nav-links:hover {
+  color: var(--text-primary);
+}
+
+.nav-links.active {
+  color: var(--accent);
+  border-bottom: 3px solid var(--accent);
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.nav-btn {
+  font-size: 0.9rem;
+  padding: 8px 18px;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar-container {
+    padding: 0 16px;
+  }
+  
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background: var(--bg-primary);
+    padding: 24px 0;
+    gap: 0;
+  }
+
+  .nav-menu.active {
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+  }
+
+  .nav-item {
+    width: 100%;
+    height: 70px;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+    border-bottom: none;
+  }
+  
+  .nav-links.active {
+    color: var(--accent);
+    border-bottom: none;
+  }
+
+  .navbar-toggle {
+    display: block;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-primary);
+  }
+
+  .auth-btn-container {
+    width: 100%;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .nav-btn {
+    width: 80%;
+  }
+}
